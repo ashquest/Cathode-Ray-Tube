@@ -3,7 +3,7 @@ name: Hourly JSON Update
 on:
   schedule:
     - cron: "25 * * * *"
-  workflow_dispatch:
+  # workflow_dispatch:
 
 jobs:
   update-data:
@@ -34,4 +34,5 @@ jobs:
           git add lists/list.json
           git commit -m "Automated update" || exit 0
           git push
+
 
