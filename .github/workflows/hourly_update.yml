@@ -26,7 +26,7 @@ jobs:
         run: |
           # If you have a requirements.txt, use: pip install -r requirements.txt
           # Otherwise, list them here, e.g.: pip install requests
-          # pip install requests 
+          pip install requests 
           pip install yt-dlp
 
       - name: Run Generator Script
@@ -39,4 +39,5 @@ jobs:
           git add lists/list.json
           # The "|| exit 0" prevents the workflow from failing if no data changed
           git commit -m "Automated update of list.json" || exit 0
+
           git push
